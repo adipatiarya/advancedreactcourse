@@ -18,9 +18,7 @@ beforeEach(()=> {
     )
 });
 
-afterEach(()=> {
-    wrapped.unmount();
-});
+
 
 
 it ('creates one LI per comments', ()=> {

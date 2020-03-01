@@ -21,7 +21,7 @@ afterEach(()=> {
 it('has a textarea and button', ()=> {
     
     expect(wrapped.find('textarea').length).toEqual(1);
-    expect(wrapped.find('button').length).toEqual(1);
+    expect(wrapped.find('button').length).toEqual(2);
 });
 
 describe('textarea and button', ()=>{

@@ -16,7 +16,6 @@ class CommentBox extends Component {
         this.setState({comment:''});
     }
     render() {
-        console.log(this.props)
         return (
             <div>
             <form onSubmit={this.handleSubmit}>
@@ -26,7 +25,7 @@ class CommentBox extends Component {
                     <button>Submit Comment</button>
                 </div>
             </form>
-            <button onClick={this.props.fetchComments}>FETCH COMMENTS</button>
+            <button className="fetch-comments" onClick={this.props.fetchComments}>FETCH COMMENTS</button>
             </div>
         )
     }
