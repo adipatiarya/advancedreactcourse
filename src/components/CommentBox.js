@@ -7,6 +7,21 @@ class CommentBox extends Component {
     state = {
         comment:''
     }
+    componentDidMount () {
+
+        this.shouldNavigateAway();
+    }
+    componentDidUpdate () {
+        
+        this.shouldNavigateAway();
+
+    }
+    shouldNavigateAway () {
+        if(!this.props.auth) {
+            this.props.history.push('/');
+        }
+    }
+
     handleChange = (event) => {
         this.setState({comment:event.target.value});
     }
@@ -30,5 +45,9 @@ class CommentBox extends Component {
         )
     }
 }
-
-export default connect(null, actions)(CommentBox);
+function mapStateToProps(state) {
+    return {
+        auth:state.auth
+    }
+}
+export default connect(mapStateToProps, actions)(CommentBox);
